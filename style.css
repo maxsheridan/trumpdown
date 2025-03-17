@@ -32,7 +32,7 @@ html {
     --body-font: 'MD-IO', monospace;
     --body-font-size: clamp(1.13rem,3vw,1.25rem);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
-    --gap: 2.5rem;
+    --gap: clamp(1.5rem,3vw,2.5rem);
 }
 
 body {
@@ -96,7 +96,7 @@ a:hover {
 
 h1 {
     font-family: var(--heading-font);
-    font-size: clamp(6rem,9vw,8rem);
+    font-size: clamp(4.75rem,15vw,8rem);
     line-height: 1.1;
 }
 
