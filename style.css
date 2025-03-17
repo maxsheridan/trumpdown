@@ -87,6 +87,10 @@ a:hover {
     text-decoration-color: var(--accent-color);
 }
 
+a.red:hover {
+    text-decoration-color: var(--primary-color);
+}
+
 #trumpdown {
     font-family: var(--body-font);
     font-size: clamp(2rem,3vw,2.5rem);
