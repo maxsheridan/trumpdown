@@ -30,7 +30,7 @@ html {
     --accent-color: #FF0000;
     --background-color: #FFFFFF;
     --body-font: 'MD-IO', monospace;
-    --body-font-size: clamp(1.13rem,3vw,1.25rem);
+    --body-font-size: clamp(1.1rem,3vw,1.25rem);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
     --gap: clamp(1.5rem,5vw,2.5rem);
 }
