@@ -32,7 +32,7 @@ html {
     --body-font: 'MD-IO', monospace;
     --body-font-size: clamp(1.13rem,3vw,1.25rem);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
-    --gap: clamp(1.5rem,3vw,2.5rem);
+    --gap: clamp(1.5rem,5vw,2.5rem);
 }
 
 body {
@@ -102,7 +102,7 @@ h1 {
 
 .divider {
     max-width: 100px;
-    margin-block-start: 1.25rem;
+    margin-block-start: .75rem;
 }
 
 .colophon-link, .back-link {
