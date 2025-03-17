@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'MD-IO';
+    src: url('/type/MD-IO-Medium.woff2');
+    font-weight: normal;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'Franklin Stone Condensed';
+    src: url('type/Franklin-Stone-Condensed.woff2');
+    font-weight: bold;
+    font-display: swap; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+:root {
+    --primary-color: #1A1A1A;
+    --accent-color: #FF0000;
+    --background-color: #FFFFFF;
+    --body-font: 'MD-IO', monospace;
+    --body-font-size: clamp(1.13rem,3vw,1.25rem);
+    --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
+    --gap: 2.5rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: unset;
+    padding: 2rem 1rem;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+* + * {
+    margin-block-start: var(--gap); 
+}
+
+.margins-off {
+    margin: 0;
+}
+
+.trumpwrap, main {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#info .trumpwrap {
+    max-width: 725px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p, a {
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    line-height: 1.5;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent-color);
+}
+
+a.red:hover {
+    text-decoration-color: var(--primary-color);
+}
+
+#trumpdown {
+    font-family: var(--body-font);
+    font-size: clamp(2rem,3vw,2.5rem);
+    color: var(--accent-color);
+;}
+
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(6rem,9vw,8rem);
+    line-height: 1.1;
+}
+
+.divider {
+    max-width: 100px;
+    margin-block-start: 1.25rem;
+}
+
+.colophon-link {
+    display: flex;
+    position: fixed;
+    bottom: .5rem;
+    right: 1rem;
+}
+
+.arrow {
+    width: auto;
+    height: clamp(12px,2vw,14px);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        justify-content: flex-start; 
+    }
+}
