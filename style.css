@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'MD-IO';
-    src: url('/type/MD-IO-Medium.woff2');
+    src: url('/type/MD_IO_Medium.woff2');
     font-weight: normal;
     font-display: swap; 
 }
 
 @font-face {
     font-family: 'Franklin Stone Condensed';
-    src: url('/type/Franklin-Stone-Condensed.woff2');
+    src: url('/type/Franklin_Stone_Condensed.woff2');
     font-weight: bold;
     font-display: swap; 
 }
