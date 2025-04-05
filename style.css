@@ -30,7 +30,7 @@ html {
     --accent-color: #FF0000;
     --background-color: #FFFFFF;
     --body-font: 'MD-IO', monospace;
-    --body-font-size: clamp(1.1rem,3vw,1.2rem);
+    --body-font-size: clamp(1.125rem,3vw,1.2rem);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
     --gap: clamp(1.5rem,5vw,2.5rem);
 }
@@ -89,7 +89,7 @@ a.red:hover {
 
 #trumpdown {
     font-family: var(--body-font);
-    font-size: clamp(2rem,3vw,2.5rem);
+    font-size: clamp(1.85rem,3vw,2.5rem);
     color: var(--accent-color);
 ;}
 
