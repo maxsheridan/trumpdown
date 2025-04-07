@@ -28,7 +28,7 @@ html {
 :root {
     --primary-color: #1A1A1A;
     --accent-color: #FF0000;
-    --background-color: #FFFFFF;
+    --background-color: #FBFAF7;
     --body-font: 'MD-IO', monospace;
     --body-font-size: clamp(1.125rem,3vw,1.2rem);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
