@@ -35,6 +35,11 @@ html {
     --gap: clamp(1.5rem,5vw,2.5rem);
 }
 
+:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -77,14 +82,15 @@ p, a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: line-through;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--accent-color);
-}
-
-a.red:hover {
-    text-decoration-color: var(--primary-color);
+@media (hover:hover) and (pointer:fine) {
+    a:hover {
+        text-decoration: line-through;
+        text-decoration-thickness: 2px;
+        text-decoration-color: var(--accent-color);
+    }
+    a.red:hover {
+        text-decoration-color: var(--primary-color);
+    }
 }
 
 #trumpdown {
