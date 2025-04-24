@@ -56,7 +56,7 @@ body {
     margin-block-start: var(--gap); 
 }
 
-.margins-off * {
+.margins-off > * {
     margin-block-start: 0;
 }
 
@@ -82,6 +82,7 @@ section h1 {
 img {
     width: 100%;
     height: auto;
+    margin-block-start: 1rem;
 }
 
 p, a {
