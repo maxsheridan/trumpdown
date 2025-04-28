@@ -25,8 +25,9 @@ html {
     font-size: 16px;
 }
 
-:root {
+:root {    
     --gap: clamp(1.5rem,5vw,2.5rem);
+    --small-gap: clamp(1rem,5vw,1.25rem);
     --body-font: 'MD-IO', monospace;
     --body-font-size: clamp(1.125rem,3vw,1.2rem);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
@@ -54,6 +55,10 @@ body {
 
 * + * {
     margin-block-start: var(--gap); 
+}
+
+.small-gap * + * {
+    margin-block-start: var(--small-gap);
 }
 
 .margins-off > * {
