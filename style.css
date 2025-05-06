@@ -106,15 +106,9 @@ p, a {
 }
 
 .fancy-pants-list {
+    list-style: disc;
     list-style-position: inside;
-    list-style: none;
-}
-
-.fancy-pants-list li::before {
-    font-size: 2rem;
-    vertical-align: top;
     color: var(--accent-color);
-    content:"*";
 }
 
 .red {
