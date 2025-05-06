@@ -106,9 +106,8 @@ p, a {
 }
 
 .fancy-pants-list {
-    list-style: disc;
+    list-style: none;
     list-style-position: inside;
-    color: var(--accent-color);
 }
 
 .red {
