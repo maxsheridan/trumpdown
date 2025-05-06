@@ -105,6 +105,22 @@ p, a {
     color: var(--accent-color);
 }
 
+.fancy-pants-list {
+    list-style-position: inside;
+    list-style: none;
+}
+
+.fancy-pants-list li::before {
+    font-size: 2rem;
+    vertical-align: top;
+    color: var(--accent-color);
+    content:"*";
+}
+
+.red {
+    color: var(--accent-color);
+}
+
 @media (hover:hover) and (pointer:fine) {
     a:hover {
         text-decoration: line-through;
