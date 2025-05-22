@@ -49,6 +49,9 @@ body {
     min-height: 100vh;
     margin: unset;
     padding: 2rem 1rem;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    line-height: 1.5;
     color: var(--primary-color);
     background-color: var(--background-color);
 }
@@ -90,14 +93,6 @@ img {
     margin-block-start: 1rem;
 }
 
-p, a {
-    font-family: var(--body-font);
-    font-size: var(--body-font-size);
-    line-height: 1.5;
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
 #trumpdown {
     font-family: var(--body-font);
     font-size: clamp(1.85rem,4vw,2.5rem);
@@ -105,9 +100,9 @@ p, a {
     color: var(--accent-color);
 }
 
-.fancy-pants-list {
-    list-style: none;
-    list-style-position: inside;
+a {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 .red {
@@ -125,6 +120,11 @@ p, a {
     }
 }
 
+.fancy-pants-list {
+    list-style: none;
+    list-style-position: inside;
+}
+
 .info-link, .back-link {
     display: flex;
     position: fixed;
@@ -135,6 +135,15 @@ p, a {
 .arrow {
     width: auto;
     height: clamp(12px,2vw,14px);
+}
+
+.vh {
+    position:absolute;
+    overflow:hidden;
+    width:1px;
+    height:1px;
+    clip-path:inset(50%);
+    white-space:nowrap;
 }
 
 @media only screen and (max-width: 768px) {

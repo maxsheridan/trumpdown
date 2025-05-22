@@ -8,7 +8,7 @@
         <link rel="preload" as="image" href="/graphics/trumptych.png?v=2" type="image/png">
         <link rel="preload" href="/type/MD_IO_Medium.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/type/Franklin_Stone_Condensed.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="stylesheet" href="/style.css?v=4" type="text/css">
+        <link rel="stylesheet" href="/style.css?v=5" type="text/css">
         <link rel="icon" sizes="32x32" href="/favicon.ico?v=2" type="image/x-icon">
         <link rel="apple-touch-icon" href="/graphics/apple_touch_icon.png?v=2" type="image/png">
         <link rel="manifest" href="/manifest.json" type="application/json">
@@ -24,13 +24,11 @@
         <meta property="og:image:type" content="image/webp">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="636">
-        <script>function updateTrumpdown(){const targetDate=new Date('November 14, 2033 00:00:00').getTime();const now=new Date().getTime();const timeLeft=targetDate-now;if(timeLeft<0){document.getElementById('trumpdown').innerHTML="The Trumpdown has ended!";return}const days=Math.floor(timeLeft/(1000*60*60*24));const hours=String(Math.floor((timeLeft%(1000*60*60*24))/(1000*60*60))).padStart(2,'0');const minutes=String(Math.floor((timeLeft%(1000*60*60))/(1000*60))).padStart(2,'0');const seconds=String(Math.floor((timeLeft%(1000*60))/1000)).padStart(2,'0');document.getElementById('trumpdown').innerHTML=`${days}d ${hours}h ${minutes}m ${seconds}s`}document.addEventListener("DOMContentLoaded",()=>{updateTrumpdown();setInterval(updateTrumpdown,1000)})
-        </script>
     </head>
     <body>
-        <main id="home">
+        <main>
             <div class="trumpwrap">
-                <section aria-label="Intro text">
+                <section>
                     <h1>
                         Trumpdown
                     </h1> 
@@ -38,15 +36,17 @@
                     <p>
                         Medical experts predict that Donald Trump may live to 87.4 years. This is a countdown to that moment.
                     </p>
-                    <div id="trumpdown"></div>
+                    <div id="trumpdown" aria-live="off" aria-hidden="true"></div>
+                    <div id="trumpdown-sr" class="vh" aria-live="polite"></div>
                 </section>
-                <aside aria-label="Link to site information" class="info-link">
-                    <a href="/info" class="link">
-                        INFO<svg class="arrow" width="100%" height="100%" viewBox="0 0 50.1 50"><path d="M50.112,0l0,40.807l-9.193,9.193l0.337,-24.776l2.13,-8.968l-2.915,-1.682l-5.269,6.39l-25.112,25.112l-6.054,-6.054l25.112,-25.112l6.39,-5.269l-1.681,-2.915l-8.969,2.131l-24.888,0.448l9.305,-9.305l40.807,0Z" fill="var(--primary-color)"/></svg>
+                <nav class="info-link">
+                    <a href="/info">
+                        INFO<svg aria-hidden="true" class="arrow" width="100%" height="100%" viewBox="0 0 50.1 50"><path d="M50.112,0l0,40.807l-9.193,9.193l0.337,-24.776l2.13,-8.968l-2.915,-1.682l-5.269,6.39l-25.112,25.112l-6.054,-6.054l25.112,-25.112l6.39,-5.269l-1.681,-2.915l-8.969,2.131l-24.888,0.448l9.305,-9.305l40.807,0Z" fill="var(--primary-color)"/></svg>
                     </a>
-                </aside>
+                </nav>
             </div>
         </main>
+        <script>let srUpdateCounter=0;function updateTrumpdown(){const targetDate=new Date('November 14, 2033 00:00:00').getTime();const now=new Date().getTime();const timeLeft=targetDate-now;const visual=document.getElementById('trumpdown');const sr=document.getElementById('trumpdown-sr');if(timeLeft<0){const endMsg="The Trumpdown has ended!";visual.textContent=endMsg;sr.textContent=endMsg;return}const days=Math.floor(timeLeft/(1000*60*60*24));const hours=Math.floor((timeLeft%(1000*60*60*24))/(1000*60*60));const minutes=Math.floor((timeLeft%(1000*60*60))/(1000*60));const seconds=Math.floor((timeLeft%(1000*60))/1000);visual.textContent=`${days}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;srUpdateCounter++;if(srUpdateCounter>=10){sr.textContent=`${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds remaining.`;srUpdateCounter=0}}document.addEventListener("DOMContentLoaded",()=>{updateTrumpdown();setInterval(updateTrumpdown,1000)});</script>
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
