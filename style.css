@@ -26,8 +26,7 @@ html {
 }
 
 :root {    
-    --gap: clamp(1.5rem,5vw,2.5rem);
-    --small-gap: clamp(1rem,5vw,1.25rem);
+    --gap: clamp(1rem,5vw,1.25rem);
     --body-font: 'MD-IO', monospace;
     --body-font-size: clamp(1.075rem,3vw,1.2rem);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
@@ -42,13 +41,8 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     margin: unset;
-    padding: 2rem 1rem;
     font-family: var(--body-font);
     font-size: var(--body-font-size);
     line-height: 1.5;
@@ -60,30 +54,46 @@ body {
     margin-block-start: var(--gap); 
 }
 
-.small-gap * + * {
-    margin-block-start: var(--small-gap);
-}
 
 .margins-off > * {
     margin-block-start: 0;
 }
 
-.trumpwrap, main {
-    display: inherit;
-    flex-direction: inherit;
+.acme-all-purpose-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 100dvh;
+    padding: 2rem 1rem;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.trumpwrap {
     max-width: 750px;
     margin: 0 auto;
+}
+
+nav {
+    margin-inline-start: auto;
 }
 
 h1 {
     font-family: var(--heading-font);
     font-size: clamp(4.25rem,15vw,8.5rem);
     line-height: 1.1;
+    text-align: center;
 }
 
-section h1 {
+.center {
     text-align: center;
 }
 
@@ -125,13 +135,6 @@ a {
     list-style-position: inside;
 }
 
-.info-link, .back-link {
-    display: flex;
-    position: fixed;
-    bottom: .5rem;
-    right: 1rem;
-}
-
 .arrow {
     width: auto;
     height: clamp(12px,2vw,14px);
@@ -147,7 +150,7 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-    body {
-        justify-content: flex-start; 
+    main {
+        align-items: flex-start;
     }
 }
