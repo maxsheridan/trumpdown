@@ -54,7 +54,6 @@ body {
     margin-block-start: var(--gap); 
 }
 
-
 .margins-off > * {
     margin-block-start: 0;
 }
