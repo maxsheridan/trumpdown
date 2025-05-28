@@ -41,8 +41,6 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     font-family: var(--body-font);
     font-size: var(--body-font-size);
@@ -83,7 +81,8 @@ main {
 }
 
 nav {
-    margin-inline-start: auto;
+    width: 100%;
+    text-align: right;
 }
 
 h1 {
@@ -112,6 +111,7 @@ img {
 }
 
 a {
+    display: inline-block;
     color: var(--primary-color);
     text-decoration: none;
 }
