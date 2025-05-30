@@ -150,9 +150,3 @@ a {
     clip-path:inset(50%);
     white-space:nowrap;
 }
-
-@media (max-width: 768px) {
-    main {
-        align-items: flex-start;
-    }
-}
