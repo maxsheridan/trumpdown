@@ -127,8 +127,11 @@ a {
 }
 
 .underline {
-    text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:rgb(var(--accent-color));text-underline-offset:2px;text-decoration-skip-ink:all;
-    
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--primary-color);
+    text-underline-offset: 2px;
+    text-decoration-skip-ink: all;
 }
 
 .red {
