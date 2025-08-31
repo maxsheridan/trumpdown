@@ -41,6 +41,10 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100dvh;
     font-family: var(--body-font);
     font-size: var(--body-font-size);
@@ -63,7 +67,7 @@ main * + * {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 main {
