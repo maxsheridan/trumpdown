@@ -56,12 +56,5 @@
             </nav>
         </div>
         <script>let srUpdateCounter=0;function updateTrumpdown(){const targetDate=new Date('November 14, 2033 00:00:00').getTime();const now=new Date().getTime();const timeLeft=targetDate-now;const visual=document.getElementById('trumpdown');const sr=document.getElementById('trumpdown-sr');if(timeLeft<0){const endMsg="The Trumpdown has ended!";visual.textContent=endMsg;sr.textContent=endMsg;return}const days=Math.floor(timeLeft/(1000*60*60*24));const hours=Math.floor((timeLeft%(1000*60*60*24))/(1000*60*60));const minutes=Math.floor((timeLeft%(1000*60*60))/(1000*60));const seconds=Math.floor((timeLeft%(1000*60))/1000);visual.textContent=`${days}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;srUpdateCounter++;if(srUpdateCounter>=10){sr.textContent=`${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds remaining.`;srUpdateCounter=0}}document.addEventListener("DOMContentLoaded",()=>{updateTrumpdown();setInterval(updateTrumpdown,1000)});</script>
-        <div style="display: flex; justify-content: center; position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); width: 100%; padding: 0 1rem">
-            <noscript>
-                <p style="display: inline; color: var(--background-color); background: var(--accent-color); padding: 0 .15rem">
-                    Enable Javascript to see clock.
-                </p>
-            </noscript>
-        </div>
     </body>
 </html>
