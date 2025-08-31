@@ -63,7 +63,7 @@ main * + * {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100dvh;
+    min-height: 100svh;
 }
 
 main {
