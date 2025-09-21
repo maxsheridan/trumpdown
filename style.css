@@ -26,9 +26,9 @@ html {
 }
 
 :root {    
-    --gap: clamp(1rem,5vw,1.25rem);
+    --gap: 1.25rem;
     --body-font: 'MD-IO', monospace;
-    --body-font-size: clamp(1.075rem,2.3vw,1.2rem);
+    --body-font-size: calc(1rem + .35vw);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
     --primary-color: #1A1A1A;
     --accent-color: #FF0000;
@@ -45,6 +45,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     min-height: 100dvh;
     font-family: var(--body-font);
     font-size: var(--body-font-size);
@@ -67,6 +68,7 @@ main * + * {
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 100vh;
     min-height: 100dvh;
 }
 
@@ -96,7 +98,7 @@ nav {
 
 h1 {
     font-family: var(--heading-font);
-    font-size: clamp(4.25rem,15vw,8.5rem);
+    font-size: calc(3rem + 5.5vw);
     line-height: 1.1;
     text-align: center;
 }
@@ -113,9 +115,9 @@ img {
 
 #trumpdown {
     min-width: 17ch;
-    margin-block-start: calc(var(--gap) *2 );
+    margin-block-start: calc(var(--gap) *2);
     font-family: var(--body-font);
-    font-size: clamp(1.85rem,4vw,2.5rem);
+    font-size: calc(1.25rem + 1.5vw);
     text-align: center;
     color: var(--accent-color);
 }
@@ -138,6 +140,16 @@ a {
     color: var(--accent-color);
 }
 
+a:hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent-color);
+}
+
+a.red:hover {
+    text-decoration-color: var(--primary-color);
+}
+
 @media (hover:hover) and (pointer:fine) {
     a:hover {
         text-decoration: line-through;
@@ -156,7 +168,7 @@ a {
 
 .arrow {
     width: auto;
-    height: clamp(12px,2vw,14px);
+    height: calc(var(--body-font-size) * .7);
 }
 
 .vh {
