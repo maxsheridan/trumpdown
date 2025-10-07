@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'MD-IO';
-    src: url('/type/MD_IO_Medium.woff2');
+    font-family: 'MD IO';
+    src: url('/type/mdio_medium.woff2');
     font-weight: normal;
     font-display: swap; 
 }
 
 @font-face {
     font-family: 'Franklin Stone Condensed';
-    src: url('/type/Franklin_Stone_Condensed.woff2');
+    src: url('/type/franklinstone_condensed.woff2');
     font-weight: bold;
     font-display: swap; 
 }
@@ -27,7 +27,7 @@ html {
 
 :root {    
     --gap: 1.25rem;
-    --body-font: 'MD-IO', monospace;
+    --body-font: 'MD IO', monospace;
     --body-font-size: calc(1rem + .35vw);
     --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
     --primary-color: #1A1A1A;
