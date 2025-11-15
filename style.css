@@ -1,14 +1,14 @@
 @font-face {
-    font-family: 'MD IO';
-    src: url('/type/mdio_medium.woff2');
-    font-weight: normal;
+    font-family: 'Franklin Stone Condensed';
+    src: url('/type/franklinstone_condensed.woff2');
+    font-weight: bold;
     font-display: swap; 
 }
 
 @font-face {
-    font-family: 'Franklin Stone Condensed';
-    src: url('/type/franklinstone_condensed.woff2');
-    font-weight: bold;
+    font-family: 'MD IO';
+    src: url('/type/mdio_medium.woff2');
+    font-weight: normal;
     font-display: swap; 
 }
 
@@ -27,16 +27,16 @@ html {
 
 :root {    
     --gap: 1.25rem;
-    --body-font: 'MD IO', monospace;
-    --body-font-size: calc(1rem + .35vw);
-    --heading-font: 'Franklin Stone Condensed', sans-serif, system-ui;
-    --primary-color: #1A1A1A;
-    --accent-color: #FF0000;
-    --background-color: #FBFAF7;
+    --body: 'MD IO', monospace;
+    --paragraph: calc(1rem + .45vw);
+    --heading: 'Franklin Stone Condensed', Impact, sans-serif; 
+    --primary: #1A1A1A;
+    --accent: #FF0000;
+    --background: #FBFAF7;
 }
 
 :focus-visible {
-    outline: 3px solid var(--primary-color);
+    outline: 3px solid var(--primary);
     outline-offset: 2px;
 }
 
@@ -47,11 +47,11 @@ body {
     align-items: center;
     min-height: 100vh;
     min-height: 100dvh;
-    font-family: var(--body-font);
-    font-size: var(--body-font-size);
+    font-family: var(--body);
+    font-size: var(--paragraph);
     line-height: 1.5;
-    color: var(--primary-color);
-    background-color: var(--background-color);
+    color: var(--primary);
+    background-color: var(--background);
 }
 
 main * + * {
@@ -74,33 +74,28 @@ main * + * {
 
 main {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
-    flex: 1;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
 }
 
 .trumpwrap {
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.trumpwrap.info {
-    max-width: 60ch;
+    max-width: 52ch;
 }
 
 nav {
     width: 100%;
-    padding: 0 1rem 1rem 0;
+    margin: 0 1rem 1rem 0;
     text-align: right;
 }
 
 h1 {
-    font-family: var(--heading-font);
-    font-size: calc(3rem + 5.5vw);
+    font-family: var(--heading);
+    font-size: clamp(1.5rem,calc(1.6rem + 11vw),9ch);
     line-height: 1.1;
-    text-align: center;
+    text-transform: uppercase;
 }
 
 .center {
@@ -115,11 +110,10 @@ img {
 
 #trumpdown {
     min-width: 17ch;
-    margin-block-start: calc(var(--gap) *2);
-    font-family: var(--body-font);
-    font-size: calc(1.25rem + 1.5vw);
-    text-align: center;
-    color: var(--accent-color);
+    margin-block-start: calc(var(--gap) * 2);
+    font-family: var(--body);
+    font-size: calc(var(--paragraph) * 1.65);
+    color: var(--accent);
 }
 
 a {
@@ -131,23 +125,23 @@ a {
 .underline {
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color: var(--primary-color);
+    text-decoration-color: var(--primary);
     text-underline-offset: 2px;
     text-decoration-skip-ink: all;
 }
 
 .red {
-    color: var(--accent-color);
+    color: var(--accent);
 }
 
 @media (hover:hover) and (pointer:fine) {
     a:hover {
         text-decoration: line-through;
         text-decoration-thickness: 2px;
-        text-decoration-color: var(--accent-color);
+        text-decoration-color: var(--accent);
     }
     a.red:hover {
-        text-decoration-color: var(--primary-color);
+        text-decoration-color: var(--primary);
     }
 }
 
@@ -158,7 +152,7 @@ a {
 
 .arrow {
     width: auto;
-    height: calc(var(--body-font-size) * .7);
+    height: calc(var(--paragraph) * .7);
 }
 
 .vh {
