@@ -106,7 +106,7 @@ img {
     min-width: 17ch;
     margin-block-start: calc(var(--gap) * 2);
     font-family: var(--body);
-    font-size: calc(var(--paragraph) * 1.65);
+    font-size: clamp(1.3rem,7vw,2.75rem);
     color: var(--accent);
 }
 
