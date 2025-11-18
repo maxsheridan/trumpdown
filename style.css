@@ -157,3 +157,11 @@ a {
     clip-path:inset(50%);
     white-space:nowrap;
 }
+
+@media (max-width: 450px) {
+    p {
+        max-width: 29ch;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+    }
+}
