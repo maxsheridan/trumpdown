@@ -21,7 +21,7 @@ html {
 :root {    
     --gap: 1.25rem;
     --body: 'MD IO', monospace;
-    --paragraph: calc(1rem + .5vw);
+    --paragraph: calc(1.09rem + .45vw);
     --primary: #1A1A1A;
     --accent: #FF0000;
     --background: #FBFAF7;
@@ -88,7 +88,7 @@ nav {
 }
 
 svg {
-    width: 66.667%;
+    width: 73%;
     height: auto;
 }
 
