@@ -5,12 +5,12 @@
     "background_color": "white",
     "icons": [
         {
-            "src": "/graphics/icon_192.png",
+            "src": "/assets/icons/icon_192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "/graphics/icon_512.png",
+            "src": "/assets/icons/icon_512.png",
             "type": "image/png",
             "sizes": "512x512"
         }
