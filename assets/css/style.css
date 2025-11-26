@@ -146,7 +146,7 @@ a {
 
 .arrow {
     width: auto;
-    height: calc(var(--paragraph) * .7);
+    height: .7em;
 }
 
 .vh {
