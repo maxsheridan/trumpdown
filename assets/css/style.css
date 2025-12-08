@@ -23,7 +23,6 @@ html {
 
 :root {    
     --gap: 1.25rem;
-    --big-gap: 2.5rem;
     --body: 'MD IO', monospace;
     --paragraph: calc(1.13rem + .425vw);
     --primary: #1A1A1A;
@@ -66,7 +65,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1.5rem 1rem;
+    padding: 3rem 1.5rem 0;
 }
 
 .trumpwrap {
@@ -103,7 +102,7 @@ img {
 }
 
 #trumpdown {
-    margin-block-start: var(--big-gap);
+    margin-block-start: calc(var(--gap) * 2);
     font-family: var(--body);
     font-size: clamp(1rem, .9rem + 3.25vw, 2.5rem);
     color: var(--accent);
