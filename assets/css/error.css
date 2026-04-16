@@ -58,6 +58,14 @@ svg:not(.arrow) {
     margin-block-end: calc(1.75rem + 1.5vw);
 }
 
+.trumpwrap {
+    max-width: 50ch;
+}
+
+.center {
+    text-align: center;
+}
+
 .vh {
     position: absolute;
     overflow :hidden;
@@ -68,15 +76,11 @@ svg:not(.arrow) {
 }
 
 a {
-    margin-block-start: 1.5em;
+    display: block;
+    margin-block-start: 1.25rem;
     text-decoration: none;
     color: var(--accent);
 }
-
-p {
-    max-width: 56ch;
-}
-
 
 .arrow {
     width: .7em;

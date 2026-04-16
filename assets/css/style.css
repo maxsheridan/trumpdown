@@ -59,7 +59,7 @@ main {
     margin-block-start: 1.25rem; 
 }
 
-svg:not(.arrow) {
+svg {
     width: 100%;
     max-width: 80%;
     height: auto;
@@ -82,7 +82,6 @@ img {
     text-align: center;
 }
 
-
 .vh {
     position: absolute;
     overflow :hidden;
@@ -90,20 +89,4 @@ img {
     height: 1px;
     clip-path: inset(50%);
     white-space: nowrap;
-}
-
-a {
-    margin-block-start: 1.5em;
-    text-decoration: none;
-    color: var(--accent);
-}
-
-p {
-    max-width: 56ch;
-}
-
-
-.arrow {
-    width: .7em;
-    height: .7em;
 }
